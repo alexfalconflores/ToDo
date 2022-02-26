@@ -1,0 +1,11 @@
+.CreateToDoButton {
+    background: #4cc2ff;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border-style: none;
+    font-size: 2rem;
+    float: right;
+    margin-right: 1%;
+}

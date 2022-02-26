@@ -1,0 +1,24 @@
+.ToDoItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(112, 110, 110, 0.3);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.ToDoItem span:first-child {
+    margin-right: 1rem;
+}
+
+.ToDoItem span:last-child {
+    margin-left: 1rem;
+}
+
+.IconCheckCompleted {
+    text-decoration: line-through;
+    text-decoration-color: black;
+    color: gray;
+}

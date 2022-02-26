@@ -1,0 +1,28 @@
+.ToDoSearchContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ToDoSearch {
+    width: 30%;
+    background-color: rgb(112, 110, 110, 0.3);
+    color: #e1e1e1;
+    border-radius: 8px;
+    padding: .7rem;
+    box-sizing: border-box;
+    border-style: none;
+    border-bottom: .2rem solid #4cc2ff;
+}
+
+.ToDoSearch::placeholder {
+    color: #b9b9b9;
+}
+
+.ToDoSearch:focus {
+    background-color: rgba(56, 55, 55, 0.3);
+    outline: none;
+}
