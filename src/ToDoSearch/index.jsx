@@ -11,7 +11,7 @@ function ToDoSearch() {
             <input className="ToDoSearch"
                 value={searchValue}
                 onChange={onSearchValueChange}
-                placeholder="Cebolla" />
+                placeholder="Onion" />
         </div>
     );
 }

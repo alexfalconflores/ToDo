@@ -6,13 +6,16 @@ import { ToDoSearch } from '../ToDoSearch';
 import { ToDoList } from '../ToDoList';
 import { ToDoItem } from '../ToDoItem';
 import { CreateToDoButton } from '../CreateToDoButton';
+import { Modal } from '../Modal';
 
 function AppUI() {
     const { error,
         loading,
         searchedTodos,
         completeTodo,
-        deleteTodo
+        deleteTodo,
+        openModal,
+        setOpenModal,
     } = React.useContext(TodoContext);
 
     return (<React.Fragment>
@@ -32,8 +35,14 @@ function AppUI() {
                     onDelete={() => deleteTodo(todo.text)} />
             ))}
         </ToDoList>
+        {openModal && (
+            <Modal>
+                <p>{searchedTodos?.length}</p>
+            </Modal>
+        )}
 
-        <CreateToDoButton />
+        <CreateToDoButton 
+        setOpenModal={setOpenModal}/>
     </React.Fragment>);
 }
 
