@@ -7,6 +7,7 @@ import { ToDoList } from '../ToDoList';
 import { ToDoItem } from '../ToDoItem';
 import { CreateToDoButton } from '../CreateToDoButton';
 import { Modal } from '../Modal';
+import { ToDoForm } from "../ToDoForm";
 
 function AppUI() {
     const { error,
@@ -37,12 +38,12 @@ function AppUI() {
         </ToDoList>
         {openModal && (
             <Modal>
-                <p>{searchedTodos?.length}</p>
+                <ToDoForm/>
             </Modal>
         )}
 
-        <CreateToDoButton 
-        setOpenModal={setOpenModal}/>
+        <CreateToDoButton
+            setOpenModal={setOpenModal} />
     </React.Fragment>);
 }
 

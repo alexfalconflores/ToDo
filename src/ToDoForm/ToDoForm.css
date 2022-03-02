@@ -1,0 +1,68 @@
+.formTodo {
+    display: flex;
+    background: #2b2b2b;
+    width: 50%;
+    height: 50%;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    border: #3f3f3f solid;
+}
+
+.formTodo label {
+    color: white;
+    font-size: 2.2rem;
+}
+
+.formTodo textarea {
+    background-color: rgba(112, 110, 110, 0.3);
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    border-style: none;
+    width: 90%;
+    height: 50%;
+    color: white;
+    box-sizing: border-box;
+    border-bottom: .2rem solid #4cc2ff;
+    margin-top: 4%;
+}
+
+.formTodo textarea::placeholder {
+    color: #b9b9b9;
+}
+
+.formTodo textarea:focus {
+    background-color: rgba(56, 55, 55, 0.3);
+    outline: none;
+}
+
+.formTodo .containerButtonsForm {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #202020;
+    width: 100%;
+    height: 25%;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    margin-top: 5%;
+}
+
+.formTodo .containerButtonsForm button {
+    width: 43%;
+    height: 43%;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #2d2d2d;
+    border-style: none;
+    color: #e1e1e1;
+    cursor: pointer;
+}
+
+.formTodo .containerButtonsForm button:first-child {
+    color: #171a20;
+    background: #4cc2ff;
+}
