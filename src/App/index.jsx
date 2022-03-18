@@ -9,6 +9,9 @@ import { ToDoItem } from '../ToDoItem';
 import { CreateToDoButton } from '../CreateToDoButton';
 import { Modal } from '../Modal';
 import { ToDoForm } from "../ToDoForm";
+import { ToDoError } from "../ToDoError";
+import { ToDoLoading } from "../ToDoLoading";
+import { ToDoEmpty } from "../ToDoEmpty";
 
 function App() {
   const { error,
@@ -35,22 +38,24 @@ function App() {
         setSearchValue={setSearchValue} />
     </ToDoHeader>
 
-    <ToDoList>
-      {error && <div>error...</div>}
-      {loading && <div>Loading...</div>}
-      {(!loading && !searchedTodos.length) && <p>Create your first Todo</p>}
-      {searchedTodos.map(todo => (
+    <ToDoList
+      error={error}
+      loading={loading}
+      searchedTodos={searchedTodos}
+      onError={() => <ToDoError />}
+      onLoading={() => <ToDoLoading />}
+      onEmpty={() => <ToDoEmpty />}
+      render={todo => (
         <ToDoItem
           key={todo.text}
           text={todo.text}
           completed={todo.completed}
           onComplete={() => completeTodo(todo.text)}
-          onDelete={() => deleteTodo(todo.text)} />
-      ))}
-    </ToDoList>
+          onDelete={() => deleteTodo(todo.text)} />)}
+    />
     {openModal && (
       <Modal>
-        <ToDoForm addTodo={addTodo} setOpenModal={setOpenModal}/>
+        <ToDoForm addTodo={addTodo} setOpenModal={setOpenModal} />
       </Modal>
     )}
 
