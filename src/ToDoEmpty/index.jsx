@@ -2,7 +2,7 @@ import React from "react";
 
 function ToDoEmpty() {
     return (
-        <div>empty...</div>
+        <div>Crea tu primer TODO!</div>
     )
 }
 
