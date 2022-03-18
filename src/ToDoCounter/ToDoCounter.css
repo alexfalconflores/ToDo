@@ -2,3 +2,7 @@
     font-size: 1.7rem;
     text-align: center;
 }
+
+.ToDoCounter--loading{
+    opacity: 25%;
+}
