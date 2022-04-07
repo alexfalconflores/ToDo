@@ -1,13 +1,21 @@
 import React from "react";
 import { withStorageListener } from "./withStorageListener";
+import { Modal } from '../Modal';
+
+import './ChangeAlert.css';
 
 function ChangeAlert({ show, toggleShow }) {
     if (show) {
         return (
-            <div>
-                <p>Hubo cambios</p>
-                <button onClick={() => toggleShow(false)}>Volver a cargar la informacion</button>
-            </div>
+            <Modal>
+                <div className="footer">
+                    <div>
+                        <p>It looks like you changed your TODOs in another browser tab or window.</p>
+                        <p>Want to sync your TODOs?</p>
+                        <button onClick={() => toggleShow(false)}>Yes! Reload information</button>
+                    </div>
+                </div>
+            </Modal>
         )
     }
     else {

@@ -78,9 +78,10 @@ function App() {
 
     <CreateToDoButton
       setOpenModal={setOpenModal} />
-      <ChangeAlertWithStorageListener
-        synchronize={synchronizeTodos}
-      />
+
+    <ChangeAlertWithStorageListener
+      synchronize={synchronizeTodos}
+    />
   </React.Fragment>);
 }
 
