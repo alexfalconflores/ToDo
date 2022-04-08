@@ -12,7 +12,7 @@ import { ToDoForm } from "../ToDoForm";
 import { ToDoError } from "../ToDoError";
 import { ToDoLoading } from "../ToDoLoading";
 import { ToDoEmpty } from "../ToDoEmpty";
-import { ChangeAlertWithStorageListener } from "../ChangeAlert";
+import { ChangeAlert } from "../ChangeAlert";
 
 function App() {
   const { error,
@@ -79,7 +79,7 @@ function App() {
     <CreateToDoButton
       setOpenModal={setOpenModal} />
 
-    <ChangeAlertWithStorageListener
+    <ChangeAlert
       synchronize={synchronizeTodos}
     />
   </React.Fragment>);
